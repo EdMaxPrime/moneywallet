@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CSV Import/Export - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CSV Import/Export";
+        var mkdocs_page_input_path = "advanced/csv.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Money Wallet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../quick-start/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/bills/">Recurring bills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/credit-card/">Credit Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/budget/">Budgets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/category/">Category</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/overview/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/currency/">Currency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/debts/">Debt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/event/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/model/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/people/">People</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/place/">Places</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/recurrence/">Recurrences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/saving/">Savings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/transaction/">Transaction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/transfer/">Transfers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/wallet/">Wallet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../customize-icon/">Customize an Icon</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../theme/">Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../import-export/">Import and Export your data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">CSV Import/Export</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#csv-export">CSV Export</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#csv-import">CSV Import</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#file-format">File Format</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../json/">JSON Backup</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Advanced &raquo;</li>
+      <li>CSV Import/Export</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="csv-importexport">CSV Import/Export</h1>
+<p>Money Wallet supports two export formats: csv and <a href="../json/">json</a>. The CSV file format is the same for import and export. It can be read by other personal finance visualizers.</p>
+<h2 id="csv-export">CSV Export</h2>
+<p>Open the app's <em>Left menu &gt; Settings &gt; Database &gt; Export data</em>. Choose CSV as the format. The start and end date will filter transactions and transfers that happened during this time.</p>
+<h2 id="csv-import">CSV Import</h2>
+<p>Open the app's <em>Left menu &gt; Settings &gt; Database &gt; Import data</em>. Then select the file's location.</p>
+<p>This will import transactions from a CSV file. <a href="../../user-guide/wallet/">Wallets</a>, <a href="../../user-guide/people/">people</a>, <a href="../../user-guide/place/">places</a>, and <a href="../../user-guide/category/">categories</a> will be created if they don't already exist, with the default settings. The <a href="../../user-guide/currency/">currency</a> must already exist. If an unknown <a href="../../user-guide/event/">event</a> name is referenced, then the event is ignored since there's no way to recreate it from name alone. If the format of any row is invalid, then the whole import process stops. </p>
+<h2 id="file-format">File Format</h2>
+<p>Order of the columns does not matter. Each row is one transaction (transfers are split into 2 transactions, <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping">like double entry accounting</a>). <a href="https://github.com/AndreAle94/moneywallet/blob/master/app/src/main/java/com/oriondev/moneywallet/storage/database/data/csv/CSVDataImporter.java">Source code</a></p>
+<table>
+<thead>
+<tr>
+<th>Column name</th>
+<th align="center">Required</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wallet</td>
+<td align="center">yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>currency</td>
+<td align="center">yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>category</td>
+<td align="center">yes</td>
+<td>string</td>
+</tr>
+<tr>
+<td>datetime</td>
+<td align="center">yes</td>
+<td>SQL date time string</td>
+</tr>
+<tr>
+<td>money</td>
+<td align="center">yes</td>
+<td>integer (if there are fractional components, the value will be multiplied according to the currency definition; eg: write 534 -&gt; "$5.34"). Negative amounts are expenses, positive amounts are income</td>
+</tr>
+<tr>
+<td>description</td>
+<td align="center">no</td>
+<td>string</td>
+</tr>
+<tr>
+<td>event</td>
+<td align="center">no</td>
+<td>string (just the name)</td>
+</tr>
+<tr>
+<td>people</td>
+<td align="center">no</td>
+<td>For one person: just their name. For many people, a "quoted" list of names separated by strings ("Name1, Name2, Name3")</td>
+</tr>
+<tr>
+<td>place</td>
+<td align="center">no</td>
+<td>string</td>
+</tr>
+<tr>
+<td>note</td>
+<td align="center">no</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../import-export/" class="btn btn-neutral float-left" title="Import and Export your data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../json/" class="btn btn-neutral float-right" title="JSON Backup">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../import-export/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../json/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

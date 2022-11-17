@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Charts - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Charts";
+        var mkdocs_page_input_path = "user-guide/overview.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Money Wallet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../quick-start/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/bills/">Recurring bills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/credit-card/">Credit Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../budget/">Budgets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../category/">Category</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Charts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#main-report">Main Report</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#drilldown-report">Drilldown Report</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#report-settings">Report Settings</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../currency/">Currency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debts/">Debt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../event/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../model/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../people/">People</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../place/">Places</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recurrence/">Recurrences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../saving/">Savings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transaction/">Transaction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transfer/">Transfers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wallet/">Wallet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/customize-icon/">Customize an Icon</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/theme/">Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/import-export/">Import and Export your data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/csv/">CSV Import/Export</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/json/">JSON Backup</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+      <li>Charts</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="charts">Charts</h1>
+<p>First, choose the wallet you want to analyze (<a href="../wallet/#total-wallet">total wallet</a> lets you view all wallets). Then, access this menu by <em>left menu &gt; overview</em>. These are also called "reports" by the app and this documentation.</p>
+<p><img alt="navigating to the overview" src="../../img/charts-nav.png" /></p>
+<figure class="captioned">
+    <img alt="pie chart breaking down spending by category" src="../../img/charts-showcase.jpg">
+    <figcaption>A pie chart breaking down spending by category</figcaption>
+</figure>
+
+<h2 id="main-report">Main Report</h2>
+<p>The main report is the first thing you see when you open the overview. There are 3 charts breaking down your finances by currency:</p>
+<ul>
+<li>a bar chart</li>
+<li>a line chart</li>
+<li>a radial chart</li>
+</ul>
+<figure class="captioned">
+    <img alt="bar chart" src="../../img/chart-bar.png">
+    <figcaption>a bar chart</figcaption>
+</figure>
+<figure class="captioned">
+    <img alt="line chart" src="../../img/chart-line.png">
+    <figcaption>a line chart</figcaption>
+</figure>
+<figure class="captioned">
+    <img alt="radial chart" src="../../img/chart-radial.png">
+    <figcaption>a radial chart, where every vertex is a day/week/month/year and larger area indicates more money</figcaption>
+</figure>
+
+<h2 id="drilldown-report">Drilldown Report</h2>
+<p>You can get a detailed view of each subgroup in the main report. To access this report, tap on any of the dates listed under the charts.</p>
+<p><img alt="dates listed under the charts" src="../../img/chart-drilldown-dates.png" /></p>
+<p>You will see three tabs. The incomes and expenses tabs will have pie charts breaking down spending by category.</p>
+<p float="left">
+    <img alt="pie charts" src="../../img/chart-pie-2.png" width="45%">
+    <img alt="pie charts" src="../../img/chart-pie.png" width="45%">
+</p>
+
+<p>The summary tab will have a grouped bar chart and a legend (to see the numbers more clearly if the chart is too crowded). Income and expenses have different colored bars, based on your <a href="../../advanced/theme/">theme</a>. Every bar is a slice of the grouping time period (see <a href="./#report-settings">report settings</a>)</p>
+<ul>
+<li>Daily   grouping makes the scale hourly</li>
+<li>Weekly  grouping makes the scale daily</li>
+<li>Monthly grouping makes the scale weekly</li>
+<li>Yearly  grouping makes the scale monthly</li>
+</ul>
+<p><img alt="drilldown bar chart" src="../../img/chart-drilldown-bar.jpg" />.</p>
+<p>Tap on any slice in the legend to see the list of <a href="../transaction/">transactions</a>.</p>
+<p>Tap the arrow in the upper left, or press the back button on your phone, to exit to the main report.</p>
+<h2 id="report-settings">Report Settings</h2>
+<p>Tap the calendar icon in the upper right corner. This brings up a dialogue menu to filter the data used in the report.</p>
+<p><img alt="report settings menu" src="../../img/chart-settings.png" /></p>
+<ol>
+<li><em>From</em>: the start date for the report</li>
+<li><em>To</em>: the end date for the report</li>
+<li><em>Group</em>: choose daily, weekly, monthly or yearly for the overview charts. For example, with "weekly" grouping, every point in the line chart represents the sum of transactions in a week.</li>
+<li>Next, you can choose between "Cash flow" and "Category". <em>Cash flow</em> allows you to filter transactions by "only incomes", "only expenses", or "net incomes" (both). <em>Category</em> allows you to filter by a transaction <a href="../category/">category</a>.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The grouping time period affects the <a href="./#main-report">main report</a>. The <a href="./#drilldown-report">drilldown report</a> is always a sub-unit of the grouping time period.</p>
+</div>
+<p>The grouping affects the scale of the drilldown bar chart (see <a href="./#drilldown-report">Drilldown Report</a>).
+- Daily makes the chart hourly
+- Weekly makes the chart daily
+- Monthly makes the chart weekly
+- Yearly makes the chart monthly</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../category/" class="btn btn-neutral float-left" title="Category"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../currency/" class="btn btn-neutral float-right" title="Currency">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../category/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../currency/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

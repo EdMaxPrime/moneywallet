@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Transaction - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Transaction";
+        var mkdocs_page_input_path = "user-guide/transaction.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Money Wallet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../quick-start/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/bills/">Recurring bills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/credit-card/">Credit Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../budget/">Budgets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../category/">Category</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../currency/">Currency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debts/">Debt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../event/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../model/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../people/">People</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../place/">Places</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recurrence/">Recurrences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../saving/">Savings</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Transaction</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-transaction">Creating a Transaction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#editing-a-transaction">Editing a transaction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finding-a-transaction">Finding a transaction</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transfer/">Transfers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wallet/">Wallet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/customize-icon/">Customize an Icon</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/theme/">Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/import-export/">Import and Export your data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/csv/">CSV Import/Export</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/json/">JSON Backup</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+      <li>Transaction</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="transaction">Transaction</h1>
+<p>This is the basic unit of the app and your finances. There are two types of transactions:</p>
+<ol>
+<li>Expenses (like purchases)</li>
+<li>Income (salary, tips, prizes)</li>
+</ol>
+<h2 id="creating-a-transaction">Creating a Transaction</h2>
+<p>The transactions screen is the default view when opening the app. You can also get there by tapping <em>Left menu &gt; any wallet</em>. Click the + button in the lower right corner. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>On Android 7 and above, you can also press the app icon until a menu pops up, then select "New transaction"</p>
+</div>
+<p>Every transaction must have a category, a money amount, time, and a wallet. Everything else is optional, and only serves as additional "tags" to categorize the transaction. All fields can be edited after you save it.</p>
+<p>A description of every field follows, from top to bottom.</p>
+<p><img alt="transaction menu" src="../../img/transaction.jpg" /></p>
+<p>The money amount can be entered by tapping on the 0 in the top right corner. You will be brought to a calculator. Press = when done.</p>
+<p>The description is how the transaction will be listed.</p>
+<p>The <a href="../category/">category</a> determines whether it is an expense or an income.</p>
+<p>You can edit the date and time, which is set to now by default. If a transaction didn't happen yet, rather than choosing a future time, just uncheck the "confirmed" checkbox (see below).</p>
+<p>The <a href="../wallet/">wallet</a> is the account the money came out of.</p>
+<p>The <a href="../event/">event</a> can be selected if the transaction happened during the event's days. This is like a super-category.</p>
+<p>You may select as many <a href="../people/">people</a> as you like. This doesn't change how the transaction is recorded, except that it will also be listed under that person's name in the people tab.</p>
+<p>The <a href="../place/">place</a> is where the transaction took place.</p>
+<p>The note is any additional text you want to add that is too much for the description.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There are two checkboxes at the bottom. Make sure to check them both if you want to see this transaction in reports.</p>
+</div>
+<p>If the "confirmed" checkbox is unchecked, then the wallet's balance won't be affected.</p>
+<p>If the "show in total wallet" checkbox is unchecked, then the transaction will be hidden from the <a href="../wallet/#total-wallet">Total Wallet</a>.</p>
+<p><strong> Tap the checkmark in the upper right corner, above the money, to save</strong></p>
+<h2 id="editing-a-transaction">Editing a transaction</h2>
+<p>Open the app's <em>Left menu &gt; Transactions</em>, tap the transaction you want to edit, then tap the edit button in the top right corner.</p>
+<h2 id="finding-a-transaction">Finding a transaction</h2>
+<p>There are a few ways to find a transaction. </p>
+<p>The simplest is to select the wallet from the left menu. This brings you to the transactions list. This list has a search bar (tap the magnifying glass in the top right corner). If you don't remember which wallet, you can switch to the <a href="../wallet/#total-wallet">total wallet</a> to see all the transactions.</p>
+<p>To find it by date, tap the calendar in the top right corner and swipe to a date. The list will filter by transactions from that day.</p>
+<p>To find it by event, go to <em>Left menu &gt; Events</em>, switch to the Completed tab, tap the event, tap the list button in the top right (looks like 3 horizontal lines), and the list will contain the transactions from that event.</p>
+<p>To find it by category, go to <em>Left menu &gt; Categories</em>, tap the category, tap the list button in the top right (looks like 3 horizontal lines), and the list will contain the transactions under that category.</p>
+<p>To find it by person, go to <em>Left menu &gt; People</em>, tap on the person, tap the list button in the top right (looks like 3 horizontal lines), and the list will contain the transactions this person was part of.</p>
+<p>To find it by place, go to <em>Left menu &gt; Places</em>, tap on the place, tap the list button in the top right (looks like 3 horizontal lines), and the list will contain the transactions at this place.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../saving/" class="btn btn-neutral float-left" title="Savings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../transfer/" class="btn btn-neutral float-right" title="Transfers">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../saving/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../transfer/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

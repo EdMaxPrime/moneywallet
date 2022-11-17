@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>JSON Backup - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "JSON Backup";
+        var mkdocs_page_input_path = "advanced/json.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Money Wallet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../quick-start/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/bills/">Recurring bills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/credit-card/">Credit Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/budget/">Budgets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/category/">Category</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/overview/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/currency/">Currency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/debts/">Debt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/event/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/model/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/people/">People</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/place/">Places</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/recurrence/">Recurrences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/saving/">Savings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/transaction/">Transaction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/transfer/">Transfers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../user-guide/wallet/">Wallet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../customize-icon/">Customize an Icon</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../theme/">Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../import-export/">Import and Export your data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../csv/">CSV Import/Export</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">JSON Backup</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-the-backup">Creating the Backup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#restoring-the-backup">Restoring the backup</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#structure-of-the-backup">Structure of the Backup</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Advanced &raquo;</li>
+      <li>JSON Backup</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="json-backup">JSON Backup</h1>
+<p>Money Wallet supports a full backup that can be exported and imported. This contains more than just the transactions found in other export formats. <a href="./#structure-of-the-backup">See below for details</a>)</p>
+<h2 id="creating-the-backup">Creating the Backup</h2>
+<p>Tap <em>Left Menu &gt; Settings &gt; Database &gt; Backup services</em>. Choose whether you want the dump created in a cloud service ("storage access framework"), or just somewhere on your phone ("external memory"). Navigate to the folder you'd like it placed in, then tap the + button in the lower right corner.</p>
+<p>It will create a file called <code>backup_YYYY-MM-DD_HH-MM-SS.mwbx</code> (current time). This is a ZIP file containing:</p>
+<pre><code>databases
+└── database.json
+</code></pre>
+<p>Any attachments you added to transactions will also be in the zip file.</p>
+<h2 id="restoring-the-backup">Restoring the backup</h2>
+<p>Open the app's <em>Left menu &gt; Settings &gt; Database &gt; Backup services</em>. Select "external memory" if the backup is on your phone, or "storage access framework" if it is on an SD card or cloud file service. You will be prompted to confirm before the import happens.</p>
+<h2 id="structure-of-the-backup">Structure of the Backup</h2>
+<p>The backup extension is <code>.mwbx</code> but is actually a ZIP file. It contains any attachments you added. The main file is <code>database.json</code> in <a href="https://www.json.org">JSON</a> format.</p>
+<p>The root object has the following keys:</p>
+<table>
+<thead>
+<tr>
+<th>key name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td><code>"header": {"version_code": 2}</code></td>
+</tr>
+<tr>
+<td>currencies</td>
+<td>iso (three letter name), name, symbol ("$"), decimals (integer, for scientific notation), favourite (boolean)</td>
+</tr>
+<tr>
+<td>wallets</td>
+<td>name, icon, currency (iso name), start_money, count_in_total (boolean), archived (boolean), index (integer, for display order)</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>name, icon, type (0 for income, 1 for expense, 2 for system), show_report (true if it should be shown in pie chart)</td>
+</tr>
+<tr>
+<td>events</td>
+<td>name, icon, note, start_date (YYYY-MM-DD), end_date (YYYY-MM-DD)</td>
+</tr>
+<tr>
+<td>places</td>
+<td>name, icon, address</td>
+</tr>
+<tr>
+<td>people</td>
+<td>name, icon, note</td>
+</tr>
+<tr>
+<td>event_people</td>
+<td>junction between events and people</td>
+</tr>
+<tr>
+<td>debts</td>
+<td>type (0 for debt, 1 for credit), icon, description, date, wallet (UUID), note, money (integer), archived (boolean)</td>
+</tr>
+<tr>
+<td>debt_people</td>
+<td>junction between debts and people</td>
+</tr>
+<tr>
+<td>budgets</td>
+<td>money, currency (iso name), type (0=expense, 1=income, 2=category), category (UUID), start_date, end_date</td>
+</tr>
+<tr>
+<td>budget_wallet</td>
+<td>junction between budgets and wallets</td>
+</tr>
+<tr>
+<td>savings</td>
+<td>description, icon, start_money (integer), end_money (integer), wallet (UUID), end_date (YYYY-MM-DD), complete (boolean), note</td>
+</tr>
+<tr>
+<td>recurrent_transactions</td>
+<td>description, category, money, direction (0 for expense, 1 for income), wallet (UUID), note, confirmed (boolean), count_in_total (boolean), start_date, last_occurrence, next_occurrence, rule (see <a href="https://www.rfc-editor.org/rfc/rfc5545#section-3.3.10">RFC 5545 iCal format</a>)</td>
+</tr>
+<tr>
+<td>recurrent_transfers</td>
+<td>recurring transfers</td>
+</tr>
+<tr>
+<td>transactions</td>
+<td>money, date, description, category (UUID), direction (0 for expense, 1 for income), type, wallet (UUID), note, event (UUID), confirmed (boolean), count_in_total (boolean)</td>
+</tr>
+<tr>
+<td>transaction_people</td>
+<td>junction between transactions and people</td>
+</tr>
+<tr>
+<td>transaction_models</td>
+<td>models of transactions: money, description, category (UUID), direction (0 for expense, 1 for income), wallet (UUID), place (UUID), note, confirmed (boolean), count_in_total (boolean)</td>
+</tr>
+<tr>
+<td>transfers</td>
+<td>description, date, from (wallet UUID), to (wallet UUID), note, confirmed (boolean), count_in_total (boolean)</td>
+</tr>
+<tr>
+<td>transfer_people</td>
+<td>junction between transfers and people</td>
+</tr>
+<tr>
+<td>transfer_models</td>
+<td>models of transfers: description, from (wallet UUID), to (wallet UUID), money_from, money_to, tax_money, note, event (UUID), place (UUID), confirmed (boolean), count_in_total (boolean)</td>
+</tr>
+<tr>
+<td>attachments</td>
+<td>file, name, type, size</td>
+</tr>
+<tr>
+<td>transaction_attachments</td>
+<td>junction between transactions and attachments</td>
+</tr>
+<tr>
+<td>transfer_attachments</td>
+<td>junction between transfers and attachments</td>
+</tr>
+</tbody>
+</table>
+<p>All records have an id (java UUID), last_edit (unix epoch timestamp of the last time it was changed), and deleted (true or false). Junctions use the UUIDs of the two entities they're attaching.</p>
+<p>All dates are YYYY-MM-DD. All money amounts are integers which are converted to the proper amount by the currency's definition. For USD, 100 becomes "$1.00"</p>
+<p>Some records have an icon, which always has the following structure. They're represented as strings, so for example</p>
+<pre><code class="language-json">&quot;{\&quot;type\&quot;:\&quot;resource\&quot;,\&quot;resource\&quot;:\&quot;ic_icon_cocktail\&quot;}&quot;
+
+&quot;{\&quot;type\&quot;:\&quot;color\&quot;,\&quot;color\&quot;:\&quot;#000000\&quot;,\&quot;name\&quot;:\&quot;S\&quot;}&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>key name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>either color or resource (picture icon)</td>
+</tr>
+<tr>
+<td>color</td>
+<td>hexadecimal RGB, for type: color</td>
+</tr>
+<tr>
+<td>name</td>
+<td>the letters in the icon, for type: color</td>
+</tr>
+<tr>
+<td>resource</td>
+<td>the name of the icon, for type: resource</td>
+</tr>
+</tbody>
+</table>
+<p>More details can be found in <code>com.oriondev.moneywallet.storage.database.backup.DefaultBackupExporter</code> and <code>com.oriondev.moneywallet.storage.database.json.JSONDataOutputFactory</code></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../csv/" class="btn btn-neutral float-left" title="CSV Import/Export"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../csv/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

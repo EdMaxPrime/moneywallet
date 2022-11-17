@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Transfers - My Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Transfers";
+        var mkdocs_page_input_path = "user-guide/transfer.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Money Wallet</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../quick-start/">Quick Start</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Examples</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/bills/">Recurring bills</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/credit-card/">Credit Cards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../budget/">Budgets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../category/">Category</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../currency/">Currency</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debts/">Debt</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../event/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../model/">Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../people/">People</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../place/">Places</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../recurrence/">Recurrences</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../saving/">Savings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../transaction/">Transaction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Transfers</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-transfer">Creating a transfer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#editing-a-transfer">Editing a transfer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finding-a-transfer">Finding a transfer</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wallet/">Wallet</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/customize-icon/">Customize an Icon</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/theme/">Theme</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/import-export/">Import and Export your data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/csv/">CSV Import/Export</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../advanced/json/">JSON Backup</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+      <li>Transfers</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="transfers">Transfers</h1>
+<p>Transfers are the companion to <a href="../transaction/">transactions</a>. While a transaction has an external source/destination not managed by the app, a transfer represents money moving around within your <a href="../wallet/">wallets</a>. For example, you can transfer money from your checking account to your credit card to pay it off. Or, you can withdraw cash from a bank account to your physical wallet.</p>
+<p>While a <a href="../transaction/">transaction</a> is a net loss / gain, a transfer doesn't change your total balance (unless you hide one of the wallets from the total).</p>
+<h2 id="creating-a-transfer">Creating a transfer</h2>
+<p>You can make a transfer by opening the app's <em>Left menu &gt; Transactions</em> then going to the Transfers tab. Tap the + button.</p>
+<p><img alt="transfer menu" src="../../img/transfer.jpg" /></p>
+<ol>
+<li>Enter an amount in the top right corner by tapping the 0.00</li>
+<li>(Optional) Give your transfer a description</li>
+<li>Select a time (default now)</li>
+<li><strong>Select a <a href="../wallet/">wallet</a> the money comes "from"</strong></li>
+<li><strong>Select a <a href="../wallet/">wallet</a> the money goes "to"</strong></li>
+<li>Enter a tax, which can be a fee charged by ATMs or financial institutions (default 0)</li>
+<li>(Optional) select an <a href="../event/">event</a> this transfer is categorized under</li>
+<li>(Optional) select <a href="../people/">people</a> part of this transfer</li>
+<li>(Optional) select a <a href="../place/">place</a> this is part of</li>
+</ol>
+<p>As with <a href="../transaction/#creating-a-transaction">transactions</a>, you can optionally add a memo (note) [10], attachments (pictures, files) [12], and toggle the confirmed and "show in <a href="../wallet/#total-wallet">total wallet</a>" checkboxes [11].</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Tap the checkmark in the upper right to save it</p>
+</div>
+<h2 id="editing-a-transfer">Editing a transfer</h2>
+<p>Open the app's <em>Left menu &gt; Transactions</em> then switch to the transfer tab. Tap on the transfer you want to edit then the edit (pencil) button in the top right corner.</p>
+<h2 id="finding-a-transfer">Finding a transfer</h2>
+<p>You can find transfers in much the same ways as <a href="../transaction/#finding-a-transaction">transactions</a>. There is one exception &mdash; you can't find them filed under people. This is because transfers only involve your finances.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../transaction/" class="btn btn-neutral float-left" title="Transaction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../wallet/" class="btn btn-neutral float-right" title="Wallet">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../transaction/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../wallet/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
